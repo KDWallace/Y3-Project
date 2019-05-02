@@ -78,15 +78,15 @@ def changeBackground(bell,item,height,centre,width,mX,mY,pmX,pmY):
 #list of commands added March 05 2019, a way of entering the filenames without hardcoding them
 #and to allow for entries to be modified
 def commands():
+    fileNames = []
     while True:
-        fileNames = []
         string = input("Enter a file: 05")
 
         #commands avaliable: "STOP","BACK","DEl" and "HELP"
         #
         #STOP command, breaks the while loop
         if string.lower() == 'stop':
-            break
+            return fileNames
 
         #BACK command, allows the user to change an entry
         elif string.lower() == 'back':       
@@ -150,7 +150,6 @@ def commands():
         #otherwise will add the inputted string to the list
         else:
             fileNames.append(string)
-    return fileNames
 
 
 
